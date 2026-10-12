@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gaffini — Luxury Eyewear</title>
+  <meta name="description" content="Gaffini. Handcrafted luxury sunglasses.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter+Tight:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.className = "js";</script>
+</head>
+<body>
+
+  <!-- ============ Navigation ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="logo" aria-label="Gaffini home">GAFFINI</a>
+      <nav aria-label="Main">
+        <ul class="nav__links" id="navLinks">
+          <li><a href="#collection">Collection</a></li>
+          <li><a href="#craft">Craft</a></li>
+          <li><a href="#maison">Maison</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <button class="nav__bag" id="cartOpen" aria-label="Open bag">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="nav__count" id="cartCount" hidden>0</span>
+        </button>
+        <button class="nav__toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Promo ribbon -->
+  <div class="ribbon">
+    Collection N°1 is here. Complimentary shipping on every order. <a href="#collection">Shop now ›</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__copy">
+        <p class="kicker reveal">New</p>
+        <h1 class="hero__title reveal">Gaffini <span class="gold-text">N°1</span></h1>
+        <p class="hero__sub reveal">Sculpted by hand. Seen by everyone.</p>
+        <div class="cta-row reveal">
+          <a href="#collection" class="pill pill--dark">Shop the collection</a>
+          <a href="#story" class="link-arrow">Discover the craft</a>
+        </div>
+      </div>
+      <div class="hero__stage" aria-hidden="true">
+        <div class="hero__glasses tilt" id="heroGlasses"></div>
+        <div class="hero__shadow"></div>
+      </div>
+    </section>
+
+    <!-- ============ Scroll story ============ -->
+    <section class="story" id="story" aria-label="How a Gaffini frame is made">
+      <div class="story__sticky">
+        <div class="story__steps">
+          <div class="story__step is-active">
+            <p class="kicker">01 — Material</p>
+            <h2>Cut from a single block.</h2>
+            <p>Premium cellulose acetate, cured for months before it is ever shaped.</p>
+          </div>
+          <div class="story__step">
+            <p class="kicker">02 — Hands</p>
+            <h2>Polished for weeks.</h2>
+            <p>Tumbled, bevelled and hand-finished until every edge feels inevitable.</p>
+          </div>
+          <div class="story__step">
+            <p class="kicker">03 — Lenses</p>
+            <h2>Colour, kept true.</h2>
+            <p>Polarized lenses with complete UV400 protection. Clarity without compromise.</p>
+          </div>
+        </div>
+        <div class="story__visual" aria-hidden="true">
+          <div class="story__frame is-active" data-step="0"></div>
+          <div class="story__frame" data-step="1"></div>
+          <div class="story__frame" data-step="2"></div>
+        </div>
+        <div class="story__progress" aria-hidden="true"><span class="is-active"></span><span></span><span></span></div>
+      </div>
+    </section>
+
+    <!-- ============ Collection ============ -->
+    <section class="collection" id="collection">
+      <header class="section-head reveal">
+        <h2>Choose your silhouette.</h2>
+        <p>Six frames. Each one, unmistakably Gaffini.</p>
+      </header>
+      <div class="segmented-wrap reveal">
+        <div class="segmented" role="tablist" aria-label="Filter by shape" id="filters">
+          <span class="segmented__thumb" aria-hidden="true"></span>
+          <button class="is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button data-filter="round" role="tab" aria-selected="false">Round</button>
+          <button data-filter="square" role="tab" aria-selected="false">Square</button>
+          <button data-filter="aviator" role="tab" aria-selected="false">Aviator</button>
+          <button data-filter="cateye" role="tab" aria-selected="false">Cat-eye</button>
+        </div>
+      </div>
+      <div class="grid" id="productGrid"></div>
+    </section>
+
+    <!-- ============ Craft (bento) ============ -->
+    <section class="craft" id="craft">
+      <header class="section-head reveal">
+        <h2>Crafted in every detail.</h2>
+        <p>The things you notice. And the ones you feel.</p>
+      </header>
+      <div class="bento">
+        <article class="tile tile--dark tile--wide reveal">
+          <p class="kicker">Handmade</p>
+          <p class="tile__stat"><span class="gold-text" data-count="60">60</span>+</p>
+          <p class="tile__text">pairs of hands, one frame.</p>
+        </article>
+        <article class="tile reveal">
+          <p class="kicker">Protection</p>
+          <p class="tile__stat">UV400</p>
+          <p class="tile__text">Complete UVA and UVB protection.</p>
+        </article>
+        <article class="tile reveal">
+          <p class="kicker">Hinges</p>
+          <div class="tile__hinge" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <p class="tile__text">Five-barrel hinges, riveted by hand.</p>
+        </article>
+        <article class="tile tile--image tile--wide reveal">
+          <div class="tile__photo" aria-hidden="true"><span>Workshop photography</span></div>
+          <div class="tile__overlay">
+            <p class="kicker">Atelier</p>
+            <p class="tile__title">Made slowly.<br>Made to last.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Maison (editorial) ============ -->
+    <section class="maison" id="maison">
+      <div class="maison__inner">
+        <p class="kicker kicker--gold reveal">The Maison</p>
+        <p class="maison__quote reveal">“An object you wear every day should be made with the patience of an heirloom.”</p>
+        <p class="maison__body reveal">Gaffini produces in small numbers, by hand, with materials chosen to age beautifully. Never more than we can stand behind.</p>
+        <div class="reveal"><a href="#contact" class="pill pill--gold">Book a private appointment</a></div>
+      </div>
+    </section>
+
+    <!-- ============ Services ============ -->
+    <section class="services" aria-label="Services">
+      <ul class="services__list">
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.5"/><circle cx="17" cy="17.5" r="1.5"/></svg>
+          <h3>Complimentary shipping</h3><p>Delivered in signature packaging.</p>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4h4"/></svg>
+          <h3>30-day returns</h3><p>Easy, complimentary returns.</p>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/></svg>
+          <h3>Two-year warranty</h3><p>Care and adjustments included.</p>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+          <h3>Private appointments</h3><p>In person or by video.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="contact" id="contact">
+      <header class="section-head reveal">
+        <h2>At your service.</h2>
+        <p>Our client advisors respond within one business day.</p>
+      </header>
+      <div class="contact__grid reveal">
+        <form class="contact__form" id="contactForm">
+          <div class="field"><input id="cName" name="name" type="text" placeholder=" " required autocomplete="name"><label for="cName">Name</label></div>
+          <div class="field"><input id="cEmail" name="email" type="email" placeholder=" " required autocomplete="email"><label for="cEmail">Email</label></div>
+          <div class="field"><textarea id="cMsg" name="message" rows="4" placeholder=" " required></textarea><label for="cMsg">How can we help?</label></div>
+          <button type="submit" class="pill pill--dark">Send message</button>
+          <p class="form-note" id="formNote" role="status"></p>
+        </form>
+        <dl class="contact__info">
+          <div><dt>Showroom</dt><dd>By private appointment</dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:hello@gaffini.com">hello@gaffini.com</a></dd></div>
+          <div><dt>WhatsApp</dt><dd>+00 000 000 0000</dd></div>
+          <div><dt>Social</dt><dd><a href="https://instagram.com/gaffini" target="_blank" rel="noopener">Instagram</a> · <a href="https://tiktok.com/@gaffini" target="_blank" rel="noopener">TikTok</a></dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <a href="#top" class="logo logo--xl" aria-label="Gaffini">GAFFINI</a>
+        <form class="newsletter" id="newsletter">
+          <label for="nlEmail">Private previews of new collections.</label>
+          <div class="newsletter__row">
+            <input id="nlEmail" type="email" placeholder="Email address" required>
+            <button type="submit" aria-label="Subscribe">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="footer__cols">
+        <div><h4>Shop</h4><a href="#collection">Collection</a><a href="#collection">Gift cards</a></div>
+        <div><h4>Maison</h4><a href="#maison">Our story</a><a href="#craft">Craftsmanship</a></div>
+        <div><h4>Client care</h4><a href="#contact">Shipping &amp; returns</a><a href="#contact">Warranty</a></div>
+        <div><h4>Follow</h4><a href="https://instagram.com/gaffini" target="_blank" rel="noopener">Instagram</a><a href="https://tiktok.com/@gaffini" target="_blank" rel="noopener">TikTok</a></div>
+      </div>
+      <div class="footer__legal">
+        <p>© <span id="year"></span> Gaffini. All rights reserved.</p>
+        <p><a href="#">Privacy</a><a href="#">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ Bag drawer ============ -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="cart" aria-label="Your bag" aria-hidden="true">
+    <div class="drawer__head">
+      <h3>Your bag</h3>
+      <button class="icon-btn" id="cartClose" aria-label="Close bag">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <ul class="drawer__items" id="cartItems"></ul>
+    <div class="drawer__foot">
+      <div class="drawer__total"><span>Subtotal</span><span id="cartTotal">$0</span></div>
+      <p class="drawer__note">Complimentary shipping. Taxes calculated at checkout.</p>
+      <button class="pill pill--dark pill--block" id="checkoutBtn">Check out</button>
+    </div>
+  </aside>
+
+  <!-- ============ Product sheet ============ -->
+  <dialog class="sheet" id="productModal" aria-label="Product details">
+    <button class="icon-btn sheet__close" id="modalClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <div class="sheet__body" id="modalBody"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Large source videos (GitHub rejects files over 100 MB)
+*.mov
+*.mp4
+.DS_Store
